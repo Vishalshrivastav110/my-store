@@ -1,10 +1,10 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:5000/api/products";
+const API_URL = "https://my-store-ujtk.onrender.com/api/products";
 
 export const searchProducts = async (keyword) => {
   const { data } = await axios.get(
-    `/api/products/search?keyword=${keyword}`
+    `${API_URL}/search?keyword=${keyword}`
   );
   return data;
 };
